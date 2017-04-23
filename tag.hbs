@@ -1,0 +1,38 @@
+{{!< default}}
+   
+<header class="main-header_corvus {{#if tag.image}} img-cover_corvus" style="background-image: url({{tag.image}}){{else}}{{#if @blog.cover}}" style="background-image: url({{@blog.cover}}){{else}}no-cover{{/if}}{{/if}}">
+    <div class="wrapper_corvus">    
+        <h1 class="blogtitle_corvus">
+            <a href="{{@blog.url}}">{{{@blog.title}}}</a>
+        </h1>      
+    </div>
+</header>
+{{> menu}}
+
+<main role="main"> 
+  <div class="wrapper_corvus flex_corvus">
+      <section class="left-box_corvus">
+          <div class="line_corvus">
+              <div class="main-icon_corvus"><i class="fa fa-tag"></i></div> 
+          </div>
+      </section>
+      <section class="right-box_corvus">
+          <div class="header-right-box_corvus">
+              <span>CATEGORY</span>
+              <h1>{{tag.name}}</h1>
+              {{#if tag.description}}
+                <p>{{tag.description}}</p>
+              {{/if}}
+          </div>
+          {{#foreach posts}}
+            {{> category}}
+          {{/foreach}}   
+             
+        {{#if pagination}}
+            {{{pagination}}}
+        {{/if}}
+      </section>
+    </div>
+</main>
+    
+{{> footer}}

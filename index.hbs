@@ -1,0 +1,22 @@
+{{!< default}}
+   
+{{> header}}
+
+<main role="main"> 
+   <div class="wrapper_corvus flex_corvus">
+      <section class="left-box_corvus">
+          <div class="line_corvus"></div>
+      </section>
+      <section class="right-box_corvus">
+          {{#foreach posts}}
+            {{> category}}
+          {{/foreach}}   
+             
+        {{#if pagination}}
+            {{{pagination}}}
+        {{/if}}
+      </section>
+    </div>
+</main>
+    
+{{> footer}}         

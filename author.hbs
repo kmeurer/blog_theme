@@ -1,0 +1,38 @@
+{{!< default}}
+   
+<header class="main-header_corvus {{#if author.cover}}img-cover_corvus " style="background-image: url({{author.cover}}){{else}}no-cover{{/if}}">
+    <div class="wrapper_corvus">    
+        <h1 class="blogtitle_corvus">
+            <a href="{{@blog.url}}">{{{@blog.title}}}</a>
+        </h1>      
+    </div>
+</header>
+{{> menu}}
+
+<main role="main"> 
+  <div class="wrapper_corvus flex_corvus">
+      <section class="left-box_corvus">
+          <div class="line_corvus">
+              {{#if author.image}}
+                <div class="main-icon_corvus authorimage_corvus" style="background-image: url({{author.image}})"></div>
+              {{/if}}
+          </div>
+      </section>
+      <section class="right-box_corvus">
+          <div class="header-right-box_corvus">
+              <span>AUTHOR</span>
+              <h1>{{author.name}}</h1>
+              <p>{{author.bio}}</p>
+          </div>
+          {{#foreach posts}}
+            {{> category}}
+          {{/foreach}}   
+             
+        {{#if pagination}}
+            {{{pagination}}}
+        {{/if}}
+      </section>
+    </div>
+</main>
+    
+{{> footer}}

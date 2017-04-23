@@ -1,0 +1,22 @@
+<article  class="box_corvus normal-article_corvus">
+    <header>
+        <ul>
+            <li><i class="fa fa-calendar"></i><time>{{date format='DD MMM YYYY'}}</time></li>
+            <li><i class="fa fa-comments"></i><a class="comments_corvus" href="{{url}}#disqus_thread" data-disqus-identifier="{{id}}">Comments</a></li>
+        </ul>
+        <h2 class="posttitle_corvus">
+            <a href="{{{url}}}" rel="bookmark">{{title}}</a>
+        </h2>
+    </header>
+    <section class="postcontent_corvus">
+        <p>{{excerpt characters="250"}}&hellip;</p>
+    </section>
+    <footer>
+        <a class="read-more_corvus" href="{{{url}}}">Read More<i class="fa fa-long-arrow-right"></i></a>
+        {{#if tags}}
+            <span class="tags-index_corvus"><i class="fa fa-tag"></i>
+                {{tags separator=", "}}
+            </span>
+        {{/if}}
+    </footer>
+</article>

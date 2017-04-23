@@ -1,0 +1,74 @@
+{{#has tag="Tech Policy"}}
+    <div class="article-category_corvus grey">
+        <a href="{{@blog.url}}/tag/tech-policy">
+            <span class="category-icon_corvus"><i class="fa fa-university"></i></span>
+            <h5 class="category-label_corvus">Tech Policy</h5>
+        </a>
+        {{> article-loop}}
+    </div>
+
+{{else}}
+
+
+{{#has tag="Tutorials"}}
+    <div class="article-category_corvus blue">
+        <a href="{{@blog.url}}/tag/tutorials">
+            <span class="category-icon_corvus"><i class="fa fa-pencil"></i></span>
+            <h5 class="category-label_corvus">Tutorials</h5>
+        </a>
+        {{> article-loop}}
+    </div>
+
+{{else}}
+
+
+{{#has tag="Technical Concepts"}}
+    <div class="article-category_corvus dark">
+        <a href="{{@blog.url}}/tag/technical-concepts">
+            <span class="category-icon_corvus"><i class="fa fa-calculator"></i></span>
+            <h5 class="category-label_corvus">Technical Concepts</h5>
+        </a>
+        {{> article-loop}}
+    </div>
+
+{{else}}
+    
+
+{{#has tag="Privacy and Civil Liberties"}}
+    <div class="article-category_corvus blue-grey">
+        <a href="{{@blog.url}}/tag/pcl">
+            <span class="category-icon_corvus"><i class="fa fa-lock"></i></span>
+            <h5 class="category-label_corvus">Privacy and Civil Liberties</h5>
+        </a>
+        {{> article-loop}}
+    </div>
+
+{{else}}
+
+
+{{#has tag="Business Strategy"}}
+    <div class="article-category_corvus red">
+        <a href="{{@blog.url}}/tag/business-strategy">
+            <span class="category-icon_corvus"><i class="fa fa-line-chart"></i></span>
+            <h5 class="category-label_corvus">Business Strategy</h5>
+        </a>
+        {{> article-loop}}
+    </div>
+
+{{else}}
+
+
+{{! Normal post without specific category }}
+<div class="article-category_corvus green">
+    <a href="#">
+        <span class="category-icon_corvus"><i class="fa fa-newspaper-o"></i></span>
+        <h5 class="category-label_corvus">General</h5>
+    </a>
+    {{> article-loop}}
+</div>
+
+{{/has}} {{! closing has tag="Tech Policy" }}
+{{/has}} {{! closing has tag="Tutorials" }}
+{{/has}} {{! closing has tag="Technical Concepts" }}
+{{/has}} {{! closing has tag="Privacy and Civil Liberties" }}
+{{/has}} {{! closing has tag="Business Strategy" }}

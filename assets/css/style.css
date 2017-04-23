@@ -1,0 +1,1543 @@
+   /* ==========================================================================
+   								Table of Contents
+   ========================================================================== */
+
+/*
+
+    0.  Normalize
+    1.  General
+    2.  Utilities
+    3.  General style
+    4.  Header
+    5.  Menu
+    6.  Article 
+    7.  Post
+    8.  Pagination
+    9.  Footer
+   10.  Author/Tag Page
+   11.  Search/Static Page
+   12.  Media Queries (Tablet)
+   13.  Media Queries (Phone)
+    
+ */
+
+/* ==========================================================================
+   0. Normalize.css v2.1.3 | MIT License | git.io/normalize | (minified)
+   ========================================================================== */
+
+article, aside, details,
+figcaption, figure,
+footer, header, hgroup,
+main, nav, section,
+summary { display: block; }
+audio, canvas, video { display: inline-block; }
+audio:not([controls]) { display: none; height: 0; }
+[hidden], template { display: none; }
+html {
+   font-family: sans-serif;
+   -ms-text-size-adjust: 100%;
+   -webkit-text-size-adjust: 100%;
+}
+body { margin: 0; }
+a { background: transparent; }
+a:focus { outline: thin dotted; }
+a:active, a:hover { outline: 0; }
+h1 { font-size: 2em; margin: 0.67em 0; }
+abbr[title] { border-bottom: 1px dotted; }
+b, strong { font-weight: 700; }
+dfn { font-style: italic; }
+hr {
+   -moz-box-sizing: content-box;
+   box-sizing: content-box;
+   height: 0;
+}
+mark { background: #FF0; color: #000; }
+code, kbd, pre,
+samp { font-family: monospace, serif; font-size: 1em; }
+pre { white-space: pre-wrap; }
+q { quotes: "\201C" "\201D" "\2018" "\2019"; }
+small { font-size: 80%; }
+sub, sup {
+   font-size: 75%;
+   line-height: 0;
+   position: relative;
+   vertical-align: baseline;
+}
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+img { border: 0; }
+svg:not(:root) { overflow: hidden; }
+figure { margin: 0; }
+fieldset {
+   border: 1px solid #c0c0c0;
+   margin: 0 2px;
+   padding: 0.35em 0.625em 0.75em;
+}
+legend { border: 0; padding: 0; }
+button, input, select,
+textarea { font-family: inherit; font-size: 100%; margin: 0; }
+button, input { line-height: normal; }
+button, select { text-transform: none; }
+button, html input[type="button"],
+input[type="reset"], input[type="submit"] {
+   -webkit-appearance: button;
+   cursor: pointer;
+}
+button[disabled], html input[disabled] { cursor: default; }
+input[type="checkbox"],
+input[type="radio"] { box-sizing: border-box; padding: 0; }
+input[type="search"] {
+   -webkit-appearance: textfield;
+   -moz-box-sizing: content-box;
+   -webkit-box-sizing: content-box;
+   box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration { -webkit-appearance: none; }
+button::-moz-focus-inner,
+input::-moz-focus-inner { border: 0; padding: 0; }
+textarea { overflow: auto; vertical-align: top; }
+table { border-collapse: collapse; border-spacing: 0; }
+ 
+
+
+ /* ==========================================================================
+   					1.  General - Setting up some base styles
+   ========================================================================== */
+
+html {
+	height: 100%;
+    max-height: 100%;
+    font-size: 62.5%;
+    margin: 0;
+	}
+
+body {
+	height: 100%;
+    max-height: 100%;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 1.6em;
+    color: #6e6e6e;
+	background: #D4DFE6;
+    margin: 0 auto;
+    -moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Noto Sans', sans-serif;
+	font-weight: 700;
+	text-rendering: optimizelegibility;
+	line-height: 1;
+    margin: 1.6rem 0 1rem;
+    color: #5e5e5e;
+	}	
+	
+::-moz-selection {
+    background: rgba(221,221,221,0.7);
+    text-shadow: none;
+	}
+
+::selection {
+    background: rgba(221,221,221,0.7);
+    text-shadow: none;
+	}
+
+h1 { font-size: 4rem; }
+
+h2 { font-size: 3.5rem; }
+
+h3 { font-size: 3.2rem; }
+
+h4 { font-size: 2.8rem; }
+
+h5 { font-size: 2.2rem; }
+
+h6 { font-size: 1.8rem; }
+
+a {
+    color: #6e6e6e;
+    transition: all ease 0.3s;
+    text-decoration: none;
+	}
+
+.postcontent_corvus a {
+    text-decoration: none;
+}
+	
+a:visited { outline: none; }
+
+.postcontent_corvus a:hover {
+    text-decoration: underline;
+    color: #000;
+	}
+
+a:hover { opacity: 1; }
+		
+a:active { outline: none; }	
+	
+a:focus { outline: none; }
+
+h1 a, h2 a, h3 a,
+h4 a, h5 a, h6 a {
+    color: #6e6e6e;
+	}
+
+p, ul, ol, dl {
+    margin: 0.5em 0 1.6em;
+	}
+
+ol ol, ul ul,
+ul ol, ol ul {
+    margin: 0.4em 0;
+	}
+
+dl dt {
+    float: left;
+    width: 180px;
+    overflow: hidden;
+    clear: left;
+    text-align: right;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-weight: bold;
+    margin-bottom: 1em;
+	}
+
+dl dd {
+    margin-left: 200px;
+    margin-bottom: 1em;
+	}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #e5e5e5;
+    margin: 2rem 0;
+    padding: 0;
+	}
+
+.postcontent_corvus input {
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 1.4rem;
+    border-radius: 50px;
+    padding: 0.5rem 1rem;  
+    background-color: #f9f9f9;
+    color: #5e5e5e;
+    border-radius: 4px;
+    border: none;
+}
+
+.postcontent_corvus img {
+	display: block;
+	max-width: 80%;
+	height: auto;
+	margin: 0 auto;
+    padding: 0.6em 0;
+	} 
+	
+blockquote {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 1.6em 0 1.6em 0;
+    padding: 0 0 0 1.6em;
+    border-left: #5e5e5e 5px solid;
+	}
+
+blockquote p {
+    margin: 0.8em 0;
+    font-style: italic;
+	}
+
+blockquote small {
+    display: inline-block;
+    margin: 0.8em 0 0.8em 1.5em;
+    font-size: 0.9em;
+    color: #57ad68;
+	}
+
+blockquote small:before { content: '\2014 \00A0'; }
+
+blockquote cite {
+    font-weight:bold;
+	}
+
+blockquote cite a { font-weight: normal; }
+
+mark { color: #5e5e5e; background-color: #ffeb3b; padding: 0rem 0.4rem; border-radius: 4px; }
+
+code, tt {
+    padding: 1px 3px;
+    font-family: Inconsolata, monospace, sans-serif;
+    font-size: 0.9em;
+    white-space: pre-wrap;
+    background: #fafafa;
+    border: 1px solid #f1f1f1;
+    border-radius: 4px;
+	}
+
+pre {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 1.6em 0;
+    width: 100%;
+    padding: 10px;
+    font-family: Inconsolata, monospace, sans-serif;
+    font-size: 0.9em;
+    white-space: pre;
+    overflow: auto;
+    background: #fafafa;
+    border: 1px solid #f1f1f1;
+    border-radius: 4px;
+	}
+
+pre code, tt {
+    font-size: inherit;
+    white-space: -moz-pre-wrap;
+    white-space: pre-wrap;
+    background: transparent;
+    border: none;
+    padding: 0;
+	}
+
+kbd {
+    display: inline-block;
+    margin-bottom: 0.4em;
+    padding: 1px 8px;
+    border: #ccc 1px solid;
+    color: #666;
+    text-shadow: #fff 0 1px 0;
+    font-size: 0.9em;
+    font-weight: bold;
+    background: #f4f4f4;
+    border-radius: 4px;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 1px 0 0 #fff inset;
+	}
+
+table {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 1.6em 0;
+    width:100%;
+    max-width: 100%;
+    background-color: transparent;
+	}
+
+table th,
+table td {
+    padding: 8px;
+    line-height: 20px;
+    text-align: left;
+    vertical-align: top;
+    border-top: 1px solid #efefef;
+	}
+
+table th { color: #000; }
+
+table caption + thead tr:first-child th,
+table caption + thead tr:first-child td,
+table colgroup + thead tr:first-child th,
+table colgroup + thead tr:first-child td,
+table thead:first-child tr:first-child th,
+table thead:first-child tr:first-child td {
+    border-top: 0;
+	}
+
+table tbody + tbody { border-top: 2px solid #efefef; }
+
+table table table { background-color: #fff; }
+
+table tbody > tr:nth-child(odd) > td,
+table tbody > tr:nth-child(odd) > th {
+    background-color: #f6f6f6;
+	}
+
+table.plain tbody > tr:nth-child(odd) > td,
+table.plain tbody > tr:nth-child(odd) > th {
+   background: transparent;
+	}
+
+iframe, .fluid-width-video-wrapper {
+    display: block;
+    margin: 1.6em 0;
+	}
+
+/* When a video is inside the fitvids wrapper, drop the
+margin on the iframe, cause it breaks stuff. */
+.fluid-width-video-wrapper iframe {
+    margin: 0;
+	}
+
+ /* ==========================================================================
+   					        2. Utilities
+   ========================================================================== */
+
+.hidden_corvus {
+	text-indent: -99999px;
+    visibility: hidden;
+    display: none;
+	}
+
+.no-cover {
+    height: auto;
+}
+
+.error_corvus {
+    margin: 20rem auto 0;
+    text-align: center;
+}
+
+.error_corvus p { color: #999;}
+
+
+ /* ==========================================================================
+   					        3. General style
+   ========================================================================== */
+.wrapper_corvus {
+    margin: 0 auto;
+    width: 98%;
+    max-width: 1000px;
+    overflow: hidden;
+    min-height: 100%;
+    height: 100%;
+}
+
+.flex_corvus {
+    display: -webkit-flex;
+    display: flex; 
+    position: relative;
+}
+
+main { height: auto; }
+
+/* Left Column */
+.left-box_corvus {
+    display: block;
+    height: auto;
+    min-height: 100%;
+    width: 160px;
+    margin: 0;
+    padding: 0;
+    background-color: #D4DFE6;
+}
+
+.left-box_corvus .line_corvus{
+    width: 8px;
+    background-color: #F8FAFF;
+    position: absolute;
+    left: 6.5rem;
+    display: block;
+    height: auto;
+    min-height: 100%;
+    margin: 0 auto;
+}
+
+/* Right Column */
+.right-box_corvus {
+    -webkit-flex: 1;
+    flex: 1;
+    width: 100%;
+    max-width: 762px;
+    margin: 0;
+    padding: 0;
+    margin-top: 5rem;
+}
+
+.box_corvus {
+    position: relative;
+    background-color: #fff;
+    border-radius: 4px;
+    margin-bottom: 4rem;
+}
+
+
+ /* ==========================================================================
+   					        4. Header
+   ========================================================================== */
+.main-header_corvus {
+    padding: 30px 0;
+    height: auto;
+    text-align: center;
+}
+
+.bloglogo_corvus { display: inline-block; }
+
+.bloglogo_corvus img {
+    display: block;
+    height: auto;
+    max-height: 64px;
+    width: auto;
+    margin: 0 auto;
+    border-radius: 100px;
+    border: 1px solid #F8FAFF;
+}
+
+.blogtitle_corvus {
+    position: relative;
+    color: #fff;
+    margin: 1rem auto 2rem;
+    letter-spacing: -0.03em;
+    z-index: 1000;
+}
+
+.blogtitle_corvus a { color: #fff; }
+
+.blogdescription_corvus {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #fff;
+    max-width: 500px;
+    margin: 0 auto;
+    line-height: 1.4;
+}
+
+/* ==========================================================================
+   					            5. Menu
+   ========================================================================== */
+
+.wrapper-menu_corvus { height: 42px; }
+
+#menu_corvus {
+    height: 42px;
+    background-color: #fff;
+    -webkit-box-shadow: 0 2px 0 0 rgba(221,221,221,0.5);
+    box-shadow: 0 2px 0 0 rgba(221,221,221,0.5);
+    position: relative;
+    z-index: 2000;
+}
+
+#menu_corvus ul {
+    text-align: center;
+    margin: 0 auto;
+    line-height: 2.1;
+    padding: 0;
+    list-style: none;
+}
+
+#menu_corvus ul li {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+#menu_corvus .wrapper_corvus > ul li a {
+    display: inline-block;
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #777;
+    vertical-align: 0;
+    padding: 0 0 0.1rem 0;
+    margin: 0 1rem;
+    border-bottom: 2px solid #fff; 
+    cursor: pointer;
+}
+
+#menu_corvus .wrapper_corvus > ul li .active { color: #333; }
+
+#menu_corvus .wrapper_corvus > ul li a:hover { color: #333; }
+
+.category_corvus i { margin-left: 0.5rem; }
+
+#menu_corvus .category_corvus > ul li a:hover { border-bottom: none !important; }
+
+/* Dropdown menu */
+#menu_corvus .category_corvus .dropdown_corvus {
+    position: absolute;
+    top: 4.2rem;
+    padding: 0.5rem 0;
+    width: auto;
+    height: auto;
+    background-color: #fff;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 0 15px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 0 15px 0 rgba(0,0,0,0.2);
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+}
+
+#dd2.active .dropdown_corvus {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+#menu_corvus .category_corvus > ul li {
+    display: block;
+    margin: 0;
+    line-height: 0.5;
+    text-align: left;
+    padding: 0;
+}
+
+#menu_corvus .category_corvus > ul li:hover a {
+    background-color: #ddd;
+    border-bottom: none;
+}
+
+#menu_corvus .category_corvus > ul li a {
+    padding: 0.7rem 2rem 0.7rem 2rem;
+    margin: 0;
+    font-size: 1.4rem;
+    line-height: 1;
+    display: block;
+    border-bottom: none;
+}
+
+#dd1 > span { display: none;}
+
+#menu_corvus .search-icon_corvus a i { display: none; }
+
+
+/* ==========================================================================
+   					            6. Article - Index
+========================================================================== */
+
+article { height: auto; }
+
+.normal-article_corvus { padding: 2.6rem 4rem 2.2rem 4rem; }
+
+.article-category_corvus {
+    position: relative;
+    z-index: 100;
+}
+
+.article-category_corvus > a:hover .category-label_corvus {
+    color: #fff;
+    -webkit-box-shadow: 0 0 15px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 0 15px 0 rgba(0,0,0,0.2);
+}
+
+/* Tooltips */
+.normal-article_corvus:after {
+    content: "";
+    display: block;
+    height: 20px ;
+    width: 20px;
+    -moz-transform: rotate(45deg);  /* FF3.5+ */
+    -o-transform: rotate(45deg);  /* Opera 10.5 */
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: absolute;
+    top: 2rem;
+    left: -1.5rem;
+    z-index: -1;
+}
+
+.category-label_corvus {
+   position: absolute;
+    top: 0.6rem;
+    right: -4px;
+    font-size: 1.1rem;
+    font-weight: 400;
+    display: inline-block;
+    width: auto;
+    padding: 0.6rem 0.8rem;
+    background-color: #D4DFE6;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    z-index: 1;
+    transition: all ease 0.3s;
+}
+
+.category-icon_corvus {
+    position: absolute;
+    top: -7px;
+    left: -12.7rem;
+    display: block;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 6px solid #F8FAFF;
+    text-align: center;
+}
+
+.category-icon_corvus i {
+    font-size: 3.2rem;
+    color: #fff;
+    vertical-align: -18px;
+}
+
+/* Date & Comments */
+header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    line-height: 0;
+}
+
+header ul li {
+    display: inline-block;
+    font-size: 1.4rem;
+    color: #999;
+    margin: 0 1rem 0 0;
+    padding: 0;
+}
+
+header ul li a { color: #999; }
+
+header ul li a:hover { color: #5e5e5e; }
+
+header ul li i {
+    margin-right: 0.5rem;
+    opacity: 0.5;
+}
+
+/* Post Title */
+header h2 {
+    font-size: 3rem;
+    margin: 2rem 0 1.8rem;
+}
+
+header h2 a { color: #5e5e5e; }
+
+/* Post Content */
+.normal-article_corvus .postcontent_corvus p {
+    margin: 0;
+    line-height: 1.4;
+    font-size: 1.8rem;
+    color: #6e6e6e;
+}
+
+/* Read More */
+.read-more_corvus {
+    display: inline-block;
+    font-size: 1.6rem;
+    font-weight: 700;
+    opacity: 0.5;
+    line-height: 0;
+    margin: 4rem 0 0;
+}
+
+.read-more_corvus i { margin-left: 0.5rem; }
+
+/* Tags */
+.tags-index_corvus {
+    display: block;
+    font-size: 1.4rem;
+    color: #999;
+    margin-top: 1.4rem;
+    line-height: 1.4;
+}
+
+ .tags-index_corvus a {
+    display: inline-block;
+    color: #999;
+ }
+
+.tags-index_corvus a:hover { color: #333; }
+
+
+ /* ==========================================================================
+   					            7. Post. hbs
+   ========================================================================== */
+
+.img-cover_corvus {
+    height: auto;
+    padding: 100px 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+
+.img-cover_corvus:before {
+	content: "";
+	display: block; 
+	position: absolute;
+    top: 0;
+	width: 100%;
+    height: 100%;
+	background-image: -o-linear-gradient(-90deg, rgba(43,43,43,0.20) 0%, rgba(43,43,43,0.50) 100%) ;
+	background-image: -moz-linear-gradient(-90deg, rgba(43,43,43,0.20) 0%, rgba(43,43,43,0.50) 100%);
+	background-image: -webkit-linear-gradient(-90deg, rgba(43,43,43,0.20) 0%, rgba(43,43,43,0.50) 100%);
+	background-image: -ms-linear-gradient(-90deg, rgba(43,43,43,0.20) 0%, rgba(43,43,43,0.50) 100%);
+	background-image: linear-gradient(-180deg, rgba(43,43,43,0.20) 0%, rgba(43,43,43,0.50) 100%);	
+	} 
+
+.center-post_corvus { margin-top: 4rem; }
+
+.margin-post_corvus {
+    margin: 6rem 8rem;
+    border: none !important;
+}
+
+/* Post header */
+.postheader_corvus { border-bottom: 1px solid #f5f5f5; }
+
+.postheader_corvus ul { margin: 2rem 0; }
+
+.postheader_corvus ul li {
+    display: inline;
+    margin: 0 0.2rem 0;
+    padding: 0;
+}
+
+.postheader_corvus ul li span {
+    font-size: 1.6rem;
+    color: #999;
+}
+
+.postheader_corvus .date-comments_corvus li span {
+    font-size: 1.6rem;
+    color: #999;
+    margin: 0;
+}
+
+.postheader_corvus .authorimage_corvus {
+    display: inline-block;
+    height: 32px;
+    width: 32px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+    vertical-align: -10px;
+}
+
+.postheader_corvus h3 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #5e5e5e;
+    display: inline-block;
+    margin-right: 2rem;
+}
+
+.postheader_corvus .date_corvus time, .postheader_corvus .comments_corvus a {
+    font-size: 1.6rem;
+    color: #999; 
+}
+
+.postheader_corvus .comments_corvus a:hover { color: #5e5e5e; }
+
+.postheader_corvus .date-comments_corvus .comments_corvus { margin-left: 2rem; }
+
+.postheader_corvus ul li i {
+    font-size: 1.6rem;
+    color: #5e5e5e;
+}
+
+/* Post Content */
+.center-post_corvus .postcontent_corvus {
+    margin: 5.5rem 0 8rem;
+    font-size: 1.8rem;
+    color: #6e6e6e;
+}   
+
+/* Post Footer */
+.article-footer_corvus { margin-bottom: 35px; }
+
+.article-footer_corvus .tags-post_corvus ul {
+    list-style: none;
+    padding: 0;
+}
+
+.article-footer_corvus .tags-post_corvus ul li {
+    display: inline-block;
+    margin: 0;
+}
+
+.article-footer_corvus .tags-post_corvus ul a {
+    display: inline-block;
+    font-size: 1.2rem;
+    color: #999;
+    padding: 0.6rem 1rem;
+    background-color: #f6f6f6;
+    border-radius: 4px;
+    margin: 0.6rem 0.5rem 0.6rem 0;
+    text-transform: uppercase; 
+    line-height: 1.6;
+}
+
+.article-footer_corvus .tags-post_corvus ul a i { margin-right: 0.5rem; }
+
+.article-footer_corvus .tags-post_corvus a:hover {
+    color: #5e5e5e;
+    -webkit-box-shadow: 0 0 5px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 0 5px 0 rgba(0,0,0,0.2);
+}
+
+.wrapper-author_corvus {
+    margin: 35px 0;
+    height: auto;
+    background-color: #fafafa;
+    border: 1px solid #f1f1f1;
+    border-radius: 4px;
+}
+
+.wrapper-author_corvus .authorimage_corvus {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 3rem 0 3rem 3rem;
+}
+
+.wrapper-author_corvus .about-author_corvus {
+    margin: 3rem;
+    -webkit-flex: 1;
+    flex: 1;
+}
+
+.wrapper-author_corvus .about-author_corvus h3, .wrapper-author_corvus .about-author_corvus h3 a {
+    color: #5e5e5e;
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+.about-author_corvus .authorbio_corvus {
+    font-size: 1.5rem;
+    color: #999;
+    margin: 1rem 0 0 0;
+    line-height: 1.3;
+}
+
+.about-author_corvus h4 {
+    display: inline-block;
+    font-size: 1.4rem;
+    margin: 0 1rem 0 0;
+    font-weight: 400;
+    color: #999;
+}
+
+.about-author_corvus h4 a { color: #999; }
+
+.about-author_corvus h4 a:hover { color: #5e5e5e; }
+
+.about-author_corvus h4 i {
+    margin-right: 0.5rem;
+    color: #5e5e5e;
+}
+
+.sharepost_corvus a {
+    display: inline-block;
+    padding: 0rem 1rem;
+    color: #999;
+    font-size: 1.2rem;
+    margin-right: 1rem;
+    font-weight: bold;
+    background-color: #fafafa;
+    border: 1px solid #f1f1f1;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+
+.sharepost_corvus a i { 
+    font-size: 1.4rem;
+    margin-right: 0.3rem;
+}
+
+.sharepost_corvus a:hover { color: #5e5e5e; }
+
+.scrollToTop {
+	width:42px; 
+	height:42px;
+	padding:0; 
+    border-radius: 50%;
+	text-align:center; 
+	background-color: #fff;
+	font-weight: bold;
+	text-decoration: none;
+    -webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.2);
+	position:fixed;
+	bottom: 4rem;
+	right:4rem;
+	display:none;
+    z-index: 5000;
+}
+
+.scrollToTop i {
+    color: #999;
+    font-size: 1.8rem;
+    vertical-align: -2px;
+}
+
+.scrollToTop:hover{
+	-webkit-box-shadow: 0 2px 6px 0 rgba(0,0,0,0.3);
+    box-shadow: 0 2px 6px 0 rgba(0,0,0,0.3);
+}
+
+.scrollToTop:active { background-color: #ddd; }
+
+
+ /* ==========================================================================
+   					            11. Pagination
+   ========================================================================== */
+
+.pagination_corvus {
+    text-align: center;
+    position: relative;
+    margin-bottom: 60px;
+    padding-top: 2rem;
+}
+
+.pagination_corvus a {
+    position: absolute;
+    display: inline-block;
+    font-size: 1.6rem;
+    color: #999;
+    padding: 1rem 0;
+    width: 160px;
+    background-color: #fff;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 2px 0 0 rgba(0,0,0,0.1);
+    box-shadow: 0 2px 0 0 rgba(0,0,0,0.1);
+}
+
+.pagination_corvus a:hover {
+    -webkit-box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+}
+
+.pagination_corvus a:active { background-color: #ddd; }
+
+.newer-posts_corvus { left: 0; top: 1rem; }
+
+.older-posts_corvus { right: 0; top: 1rem; }
+
+.pagination_corvus a span { padding: 0 0.5rem; }
+
+.pagination_corvus .page-number_corvus {
+    font-size: 1.6rem;
+    color: #999;
+}
+
+
+ /* ==========================================================================
+   					            12. Footer 
+   ========================================================================== */
+
+.main-footer_corvus {
+    clear: both;
+    position: static;
+    bottom: 0;
+    min-height: 190px;
+    width: 100%;
+    border-top: 8px solid #F8FAFF;
+    padding-top: 4rem;
+    text-align: center;
+}
+
+/* Icons */
+.main-footer_corvus .wrapper_corvus > a {
+    display: inline-block;
+    margin: 2rem 0.5rem 0;
+    width: 47px;
+    height: 47px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.main-footer_corvus .wrapper_corvus > a:hover { background-color: #fff; }
+
+.main-footer_corvus .wrapper_corvus > a i {
+    font-size: 2.4rem;
+    color: #fff;
+    vertical-align: -9px;
+}
+
+.main-footer_corvus p {
+    margin: 4rem 0 2rem;
+    font-size: 1.2rem;
+    color: #fff;
+    line-height: 1.4;
+}
+
+.main-footer_corvus p a {
+    color: #fff;
+    font-weight: 700;
+}
+
+.main-footer_corvus p a:hover { text-decoration: underline; }
+
+
+ /* ==========================================================================
+   					            12. Author/Tag Page
+   ========================================================================== */
+
+.main-icon_corvus {
+    position: absolute;
+    top: 94px;
+    left: -4.2rem;
+    height: 90px;
+    width: 90px;
+    background-color: #ddd;
+    border: 6px solid #ddd;
+    border-radius: 50%;
+    text-align: center;
+    box-sizing: border-box;
+}   
+
+.line_corvus .authorimage_corvus {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; 
+}
+
+.line_corvus .main-icon_corvus i {
+    font-size: 4.6rem;
+    color: #fff;
+    vertical-align: -33px;
+}
+
+.header-right-box_corvus {
+    height: auto;
+    margin: 2rem 0 5rem;
+    text-align: center;
+}
+
+.header-right-box_corvus span {
+    font-size: 4.2rem;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.header-right-box_corvus h1 {
+    font-size: 3rem;
+    font-weight: 400;
+    color: #999;
+    margin: 1.3rem 0 2rem;
+    letter-spacing: -0.06rem;
+    text-transform: uppercase;
+}
+
+.header-right-box_corvus p {
+    font-size: 1.4rem;
+    color: #999;
+    margin: 0 auto;
+    line-height: 1.4;
+    max-width: 500px;
+}
+
+
+ /* ==========================================================================
+   					            12. Serach/Static Page
+   ========================================================================== */
+
+.page-wrap_corvus {
+    min-height: 100%;
+    margin-bottom: -198px;
+}
+
+.page-wrap_corvus:after {
+    content: "";
+    display: block;
+    height: 190px;
+}
+
+.page-wrap_corvus .center-post_corvus { text-align: center; }
+
+.page-wrap_corvus .header-right-box_corvus { margin-bottom: 3rem; }
+
+/* Input */
+.page-wrap_corvus #search-field {
+    margin-bottom: 0;
+    height: 36px;
+    width: 410px;
+    background-color: #F8FAFF;
+    background-repeat: no-repeat;
+    background-position: 1rem 1rem;
+    color: #5e5e5e;
+    border-radius: 4px;
+    border: none;
+    padding: 0 0 0 4rem;
+    font-size: 1.6rem;
+}
+
+/* Search results */
+#results {
+    margin: 0 auto 8rem;
+    text-align: center;
+}
+
+#results p {
+    margin: 3rem 0;
+    padding: 1rem 0;
+    color: #999;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: 0.02rem;
+    text-align: center;
+}
+
+#results a {
+    display: block;
+    max-width: 620px;
+    min-height: 80px;
+    text-align: center;
+    background: #fafafa;
+    border-radius: 4px;
+    margin: 2rem auto;
+    color: #5e5e5e;
+}
+
+#results a h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    padding: 2.2rem 2rem 1rem;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#results a:hover {
+    background-color: #fff;
+    -webkit-box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+}
+
+.pagetitle_corvus {
+    font-size: 4.2rem;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 8rem auto;
+} 
+
+.margin-page_corvus { padding: 1rem 8rem; }
+
+
+ /* ==========================================================================
+   					            15.  Media Queries (Tablet)
+   ========================================================================== */
+
+ @media all and (max-width: 900px) {
+     
+    h1 { 
+        font-size: 4rem;
+        text-indent: -2px;
+    }
+
+    h2 { font-size: 3rem; }
+
+    h3 { font-size: 2.8rem; }
+
+    h4 { font-size: 2.4rem; }
+     
+    .left-box_corvus { width: 120px; }
+     
+    .left-box_corvus .line_corvus { left: 5rem; }
+     
+    .category-icon_corvus { left: -10.2rem; }
+     
+    .normal-article_corvus { padding: 2.6rem 2rem 2.2rem 2rem; }
+     
+    header h2 { font-size: 2.8rem; }
+     
+    .normal-article_corvus .postcontent_corvus p { font-size: 1.6rem; }
+     
+    .read-more_corvus { margin: 2rem 0 0; }
+    
+    .margin-post_corvus { margin: 4rem 4rem; }
+     
+    .postheader_corvus h1 { font-size: 3.6rem; }
+     
+    .postheader_corvus .date-comments_corvus { margin-top: 1rem;}
+     
+    .center-post_corvus .postcontent_corvus {
+        margin: 3.5rem 0 6rem;
+        font-size: 1.8rem;
+        line-height: 1.6;
+    }
+     
+    .wrapper-author_corvus .authorimage_corvus { margin: 2rem; }
+
+    .wrapper-author_corvus .about-author_corvus { margin: 2.5rem 2rem 2rem 0; }
+     
+    .header-right-box_corvus { margin: 2rem 0 10rem;}
+
+    .header-right-box_corvus span { font-size: 3.5rem; }
+
+    .header-right-box_corvus h1 {
+        font-size: 2.6rem;
+        margin: 1rem 0 2rem;
+     }
+     
+    .main-icon_corvus {
+        left: -3.8rem;
+        height: 80px;
+        width: 80px;
+    } 
+     
+    .line_corvus .main-icon_corvus i {
+        font-size: 4rem;
+        vertical-align: -25px;
+    }
+     
+    #results a { min-height: 75px; }
+
+    #results a h2 {
+        font-size: 2.6rem;
+        padding: 2.2rem 2rem 0.8rem;
+    }
+     
+     .scrollToTop { display: none !important; }
+     
+     .margin-page_corvus { padding: 1rem 4rem; }
+     
+     #menu_corvus .wrapper_corvus a { border-bottom: none !important; }
+     
+     /* Category dropdown menu */
+    #dd2.active .dropdown_corvus { opacity: 0; }
+       
+    #dd2.active .mobile-list_corvus { 
+        opacity: 1; 
+        left: 0;
+        right: 0;
+        padding: 0;
+        margin: 0 ;
+        width: 100%;
+        border-radius: 0px;
+        -webkit-box-shadow: 0 8px 15px 0 rgba(0,0,0,0.2);
+        box-shadow: 0 8px 15px 0 rgba(0,0,0,0.2);
+    }
+    
+    #dd2.active .mobile-list_corvus li, #dd1.active .mobile-list_corvus li {
+        display: block;
+        margin: 1rem auto;
+        line-height: 2;
+        text-align: center; 
+        padding: 0;
+    }
+    
+    #dd1 .dropdown_corvus  { display: none;}
+    
+    #dd1.active .mobile-list_corvus  {
+        position: absolute;
+        display: block; 
+        top: 4.2rem;
+        left: 0;
+        right: 0;
+        padding: 0;
+        margin: 0 auto;
+        width: 100%;
+        border-radius: 0px;
+        background-color: #fff;
+        -webkit-box-shadow: 0 8px 15px 0 rgba(0,0,0,0.2);
+        box-shadow: 0 8px 15px 0 rgba(0,0,0,0.2);
+    }
+    
+    #dd1.active .mobile-list_corvus a, #dd2.active .mobile-list_corvus li a {
+        padding: 0.7rem 0 0.7rem 0;
+        font-size: 1.4rem;
+        line-height: 1;
+        display: block;
+        margin: 0;
+    }
+    
+    #dd1.active .mobile-list_corvus  a:hover {
+        background-color: #ddd;
+        border-bottom: none;
+    }
+    
+    #dd1 > span { 
+        display: block; 
+        font-size: 1.6rem;
+        line-height: 2.9; 
+        position: absolute;
+        left: 1rem; 
+        top: 0;
+        border-bottom: none;
+        cursor: pointer;
+    }
+    
+    #dd1 > span:hover { color: #333; }
+    
+    /* Menu search icon */
+    #menu_corvus .search-icon_corvus { 
+        position: absolute; 
+        right: 1rem; 
+        top: 0rem;
+        line-height: 2;
+    }
+
+ }
+
+
+/* ==========================================================================
+   					13. Media Queries - Phone
+   ========================================================================== */
+ 
+@media all and (max-width: 600px) {
+       
+    .main-header_corvus { padding: 30px 0;}
+
+    .bloglogo_corvus img { max-height: 44px; }
+
+    .blogtitle_corvus { font-size: 3.2rem; }
+
+    .blogdescription_corvus { font-size: 1.3rem; }
+    
+    .left-box_corvus { display: none; }  
+    
+    .right-box_corvus { margin-top: 5rem; }
+    
+    .box_corvus { margin-bottom: 5rem; }
+    
+    .normal-article_corvus { padding: 2rem 1rem; }
+    
+    .normal-article_corvus:after, .category-icon_corvus { display: none; }
+
+    .category-label_corvus {
+        top: 0.8rem;
+        right: auto;
+        left: -14px;
+        padding: 0.6rem 1.2rem;
+        border: none;
+        margin-left: 1.2rem;
+    }
+     
+    header ul { margin-top: 3.5rem; }
+    
+    .pagination_corvus {
+        margin-bottom: 7rem;
+        padding-top: 2rem;
+    }
+    
+    .pagination_corvus span { display: none; }
+
+    .pagination_corvus a {
+        padding: 0.5rem 0;
+        width: 40px;
+    }
+
+    .newer-posts_corvus { left: 2rem; top: 1.3rem; }
+    
+    .older-posts_corvus { right: 2rem; top: 1.3rem; }
+
+    .pagination_corvus .page-number_corvus { display: block; }
+    
+    .header-right-box_corvus { margin: 0rem 0 10rem; }
+    
+    .header-right-box_corvus { margin: 0rem 0 5rem; }
+
+    .header-right-box_corvus span { font-size: 3rem; }
+
+    .header-right-box_corvus h1 {
+        font-size: 2.2rem;
+        margin: 0.5rem 0 1rem;
+     }
+    
+    .center-post_corvus { margin-top: 5rem; }
+    
+    #results p { font-size: 1.3rem; }
+    
+    #results a { min-height: 68px; }
+
+    #results a h2 { font-size: 2.2rem; }
+    
+    #results a { margin: 1rem auto; }
+    
+    .pagetitle_corvus {
+        font-size: 3rem;
+        margin: 5rem auto;
+    }
+    
+    .margin-post_corvus { margin: 2rem 1rem; }
+    
+    .margin-post_corvus .posttitle_corvus { font-size: 3.2rem; }
+    
+    .center-post_corvus .postcontent_corvus { font-size: 1.6rem; margin: 3rem 0 3rem; line-height: 1.4; }
+    
+    .postheader_corvus .date-comments_corvus { display: block; }
+    
+    .wrapper-author_corvus .authorimage_corvus { display: none; }
+
+    .wrapper-author_corvus .about-author_corvus { margin: 1rem; }
+    
+    .scrollToTop { display: none !important; }
+
+    /* Category dropdown menu */
+    #dd2.active .dropdown_corvus { opacity: 0; }
+       
+    #dd2.active .mobile-list_corvus { 
+        opacity: 1; 
+        left: 0;
+        right: 0;
+        padding: 0;
+        margin: 0 ;
+        width: 100%;
+        border-radius: 0px;
+        -webkit-box-shadow: 0 8px 15px 0 rgba(0,0,0,0.2);
+        box-shadow: 0 8px 15px 0 rgba(0,0,0,0.2);
+    }
+    
+    #dd2.active .mobile-list_corvus li, #dd1.active .mobile-list_corvus li {
+        display: block;
+        margin: 1rem auto;
+        line-height: 2;
+        text-align: center; 
+        padding: 0;
+    }
+    
+    #dd1 .dropdown_corvus  { display: none;}
+    
+    #dd1.active .mobile-list_corvus  {
+        position: absolute;
+        display: block; 
+        top: 4.2rem;
+        left: 0;
+        right: 0;
+        padding: 0;
+        margin: 0 auto;
+        width: 100%;
+        border-radius: 0px;
+        background-color: #fff;
+        -webkit-box-shadow: 0 8px 15px 0 rgba(0,0,0,0.2);
+        box-shadow: 0 8px 15px 0 rgba(0,0,0,0.2);
+    }
+    
+    #dd1.active .mobile-list_corvus a, #dd2.active .mobile-list_corvus li a {
+        padding: 0.7rem 0 0.7rem 0;
+        font-size: 1.4rem;
+        line-height: 1;
+        display: block;
+        margin: 0;
+    }
+    
+    #dd1.active .mobile-list_corvus  a:hover {
+        background-color: #ddd;
+        border-bottom: none;
+    }
+    
+    #dd1 > span { 
+        display: block; 
+        font-size: 1.6rem;
+        line-height: 2.9; 
+        position: absolute;
+        left: 1rem; 
+        top: 0;
+        border-bottom: none;
+        cursor: pointer;
+    }
+    
+    #dd1 > span:hover { color: #333; }
+    
+    /* Menu search icon */
+    #menu_corvus .search-icon_corvus { 
+        position: absolute; 
+        right: 1rem; 
+        top: 0rem;
+        line-height: 2;
+    }
+    
+    #menu_corvus .search-icon_corvus a span { display: none; }
+    
+    #menu_corvus .search-icon_corvus a i { display: block; }
+    
+    #menu_corvus .wrapper_corvus a { border-bottom: none !important; }
+ 
+    .margin-page_corvus { padding: 0.1rem 2rem; }
+    
+}

@@ -1,0 +1,95 @@
+{{!< default}}
+
+ {{#post}}             
+ <header class="main-header_corvus {{#if image}}img-cover_corvus" style="background-image: url({{image}}){{else}}no-cover{{/if}}">
+    <div class="wrapper_corvus">    
+        <h1 class="blogtitle_corvus">
+            <a href="{{@blog.url}}">{{{@blog.title}}}</a>
+        </h1>      
+    </div>
+</header>
+{{> menu}}
+
+<main role="main">
+    <div class="wrapper_corvus box_corvus center-post_corvus">
+        <article class="margin-post_corvus">
+            <header class="postheader_corvus">
+                <h1 class="posttitle_corvus">{{title}}</h1>
+                <ul>
+                    <li><span>by</snan></li>
+                    {{#if author.image}}
+                        <li><div class="authorimage_corvus" style="background-image: url({{author.image}})"></div></li>
+                    {{/if}}
+                    <li><h3 class="authorname_corvus"><a href="{{@blog.url}}/author/{{author.slug}}">{{author.name}}</a></h3></li>
+                    <li class="date-comments_corvus">
+                        <span class="date_corvus"><i class="fa fa-calendar"></i><time> {{date format='DD MMM YYYY'}}</time></span>
+                        <span class="comments_corvus"><i class="fa fa-comments"></i><a href="{{url}}#disqus_thread" data-disqus-identifier="{{id}}">Comments</a></span>
+                    </li>
+                </ul>
+            </header>
+        
+            <section class="postcontent_corvus">
+                {{content}}
+            </section>
+            
+            <footer class="article-footer_corvus">
+                {{#if tags}}
+                    <section class="tags-post_corvus">
+                        <ul>
+                            {{#foreach tags}}
+                                <a href="{{url}}"><li><i class="fa fa-tag"></i>{{name}}</li></a>
+                            {{/foreach}}
+                        </ul>
+                    </section>
+                {{/if}}
+                
+                <section class="wrapper-author_corvus flex_corvus">
+                    {{#if author.image}}
+                        <div class="authorimage_corvus" style="background-image: url({{author.image}})"></div>
+                    {{/if}}
+                    <div class="about-author_corvus">
+                        <h3 class="authorname_corvus"><a href="{{@blog.url}}/author/{{author.slug}}">{{author.name}}</a></h3>
+                        {{#if author.bio}}<p class="authorbio_corvus">{{author.bio}}</p>{{/if}}
+                        {{#if author.location}}
+                            <h4><i class="fa fa-map-marker"></i>{{author.location}}</h4>
+                        {{/if}}
+                        {{#if author.website}}
+                            <h4><i class="fa fa-link"></i><a href="{{author.website}}" itemprop="url">{{author.website}}</a></h4>
+                        {{/if}}
+                    </div>
+                </section>
+                
+                <section class="sharepost_corvus">
+                    <a target="_blank" href="http://twitter.com/share?text={{title}}&url={{url absolute="true"}}"><i class="fa fa-twitter"></i><span class="hidden_typesome">Tweet</span></a>
+				<a target="_blank" href="http://www.facebook.com/sharer.php?u={{url absolute="true"}}"><i class="fa fa-facebook"></i><span class="hidden_typesome">Share</span></a>
+				<a target="_blank" href="https://plus.google.com/share?url={{url absolute="true"}}"><i class="fa fa-google-plus"></i><span class="hidden_typesome">Share</span></a>
+                </section>
+                
+            </footer>
+            
+        </article>
+        {{/post}} 
+    
+        <div id="disqus_thread" class="disqusbox_corvus margin-post_corvus">
+        
+            <script type="text/javascript">
+
+                var disqus_shortname = 'kevinmeurer'; // required: replace example with your Disqus shortname
+                var disqus_identifier = '{{post.id}}';
+
+                /* * * DON'T EDIT BELOW THIS LINE * * */
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+        </div>   
+    </div>
+</main>
+<a class="scrollToTop" href="#" title="Scroll Up"><i class="fa fa-angle-up"></i></a>
+
+{{> footer}} 

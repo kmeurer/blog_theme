@@ -1,0 +1,16 @@
+<header class="main-header_corvus">
+    <div class="wrapper_corvus">
+        {{#if @blog.logo}}
+            <a class="bloglogo_corvus" href="{{@blog.url}}">
+                <img src="{{@blog.logo}}" alt="{{@blog.title}}" />
+            </a>
+        {{/if}}    
+        <h1 class="blogtitle_corvus">
+            <a href="{{@blog.url}}">{{{@blog.title}}}</a>
+        </h1>      
+        <p class="blogdescription_corvus">
+            {{@blog.description}}
+        </p>
+    </div>
+</header>
+{{> menu}}

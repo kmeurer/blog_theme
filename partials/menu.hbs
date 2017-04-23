@@ -1,0 +1,27 @@
+<div class="wrapper-menu_corvus">
+    <div id="menu_corvus">
+        <div class="wrapper_corvus">
+            <ul>
+                
+                <li id="dd1" class="wrapper-dropdown_corvus">
+                <span class="fa fa-bars"></span>
+                <ul class="menu-list_corvus dropdown_corvus mobile-list_corvus"> 
+                
+                {{! Your custom links: }}
+                <li><a href="{{@blog.url}}">Blog</a></li>
+                <li><a href="{{@blog.url}}/about/">About Kevin</a></li>
+                
+                </ul></li>
+                
+                {{! Dropdown menu for category list - edit in Ghost Navigation Settings }}
+                <li id="dd2" class="wrapper-dropdown-corvus category_corvus">
+                    <a href="#" onClick="return false;">Category<i class="fa fa-angle-down"></i></a>
+                    {{navigation}}
+                </li>
+                
+                {{! Search link/icon }}
+                <li class="search-icon_corvus"><a href="{{@blog.url}}/search/"><span>Search</span><i class="fa fa-search"></i></a></li>
+            </ul>               
+        </div> 
+    </div>
+</div>

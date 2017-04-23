@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    {{! Document Settings }}
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    {{! Page Meta }}
+    <title>{{meta_title}}</title>
+    <meta name="description" content="{{meta_description}}" />
+    <link rel="shortcut icon" href="{{asset "/favicon.png"}}">
+    
+    {{> custom/meta this}}
+
+    {{! Styles }}
+    <link href='http://fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic,700italic&subset=cyrillic-ext,latin' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="{{asset "css/style.css"}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset "css/colors.css"}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset "css/font-awesome.min.css"}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset "css/prism.css"}}" />
+ 
+    {{! jQuery }}
+    <script type="text/javascript" src="{{asset "js/jquery-1.9.1.min.js"}}"></script>
+    <script type="text/javascript" src="{{asset "js/stickUp.min.js"}}"></script> 
+    <script type="text/javascript" src="{{asset "js/prism.js"}}"></script>    
+ 
+    <script>
+        $(document).ready(function(){
+            //Check to see if the window is top if not then display button
+            $(window).scroll(function(){
+                if ($(this).scrollTop() > 500) {
+                    $('.scrollToTop').fadeIn();
+                } else {
+                    $('.scrollToTop').fadeOut();
+                }
+            });
+            //Click event to scroll to top
+            $('.scrollToTop').click(function(){
+                $('html, body').animate({scrollTop : 0},800);
+                return false;
+            });
+        });
+    </script>
+    
+     <script type="text/javascript">
+                //initializing jQuery
+                jQuery(function($) {
+                  $(document).ready( function() {
+                    //enabling stickUp on the '.navbar-wrapper' class
+                    $('#menu_corvus').stickUp({
+                      //enabling marginTop with the 'auto' setting 
+                      marginTop: 'auto'
+                    });
+                });
+              });    
+    </script>
+   
+    {{! Horizontal Menu - links }}
+<script type="text/javascript" charset="utf-8">
+$(document).ready(function() {
+	if(location.pathname != "/") {
+		$('.menu-list_corvus a[href^="/' + location.pathname.split("/")[1] + '"]').addClass('active');
+	} else $('.menu-list_corvus a:eq(0)').addClass('active');
+});
+
+    </script>
+    <script type="text/javascript" charset="utf-8">
+    $(function(){
+  $('a').each(function() {
+    if ($(this).attr('href') == window.location.href.replace(/\?.*/,"")) {
+        $(this).addClass('active');
+    }
+  });
+});
+ 
+</script>
+
+    {{! Responsive Meta Tags }}
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" /> 
+
+    {{! Ghost outputs important style and meta data with this tag }}
+    {{ghost_head}}
+
+
+</head>
+   
+<body id="blue-grey" class="{{body_class}}">
+    
+	{{{body}}}
+	{{ghost_foot}}
+
+    {{! Disqus comments }}
+    <script type="text/javascript">
+        var disqus_shortname = 'kevinmeurer'; // required: replace example with your Disqus shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function () {
+            var s = document.createElement('script'); s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+    </script>
+
+    <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
+    <script type="text/javascript" src="{{asset "js/index.js"}}"></script>
+    <script type="text/javascript" src="{{asset "js/dropdown.js"}}"></script>
+   
+    
+</body>
+</html>

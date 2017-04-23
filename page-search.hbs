@@ -1,0 +1,34 @@
+{{!< default}}
+              
+<div class="page-wrap_corvus">
+
+    {{> header}}
+
+    {{! Search engine }}
+    <script type="text/javascript" src="{{asset "js/jquery.ghostHunter.js"}}"></script>
+
+    <main role="main">
+        <div class="wrapper_corvus center-post_corvus">
+            <section class="header-right-box_corvus">
+                <span>Search</span>
+            </section>
+
+            <form>
+                <input type="text" id="search-field" placeholder="search..." style="background-image: url({{asset "img/search.png"}})" /> 
+            </form>
+
+            <section id="results"></section>
+
+            <script>
+            $("#search-field").ghostHunter({
+              results   : "#results",
+              onKeyUp   : true,
+              zeroResultsInfo     : false
+
+            });
+            </script> 
+            
+        </div>
+    </main>            
+</div>
+{{> footer}}

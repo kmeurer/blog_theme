@@ -1,0 +1,540 @@
+/* ====================================================================================================================================================
+   					                                            Color palette
+=================================================================================================================================================== */
+/* 
+    01. red         - #AF4034
+    02. pink        - #e91e63
+    03. purple      - #9c27b0
+    04. deep-purple - #673ab7
+    05. indigo      - #3f51b5
+    06. blue        - #15629E
+    07. light-blue  - #03a9f4
+    08. cyan        - #00bcd4
+    09. teal        - #009688
+    10. green       - #1D6A20
+    11. light-green - #8bc34a
+    12. lime        - #cddc39
+    13. yellow      - #ffeb3b
+    14. amber       - #ffc107
+    15. orange      - #ff9800
+    16. deep-orange - #ff5722
+    17. brown       - #795548
+    18. grey        - #9e9e9e
+    19. blue-grey   - #607d8b
+    20. dark        - #333
+ */
+
+ /* ==========================================================================
+   					1. RED - #AF4034 ( article class="red" )
+   ========================================================================== */
+.red article { border-left: 8px solid #AF4034 !important; }
+.red .category-icon_corvus { background-color: #AF4034 !important; }
+.red article:after { background-color: #AF4034 !important; }
+.red .category-label_corvus { border-right: 4px solid #AF4034 !important; }
+.red > a:hover .category-label_corvus { background-color: #AF4034 !important; }
+.red article header ul li > i { color: #AF4034 !important; }
+.red header h2 a:hover { color: #AF4034 !important; }
+.red article .read-more_corvus, .red article .read-more_corvus i { color: #AF4034 !important; }
+
+ /* ==========================================================================
+   					2. PINK - #e91e63 ( article class="pink" ) 
+   ========================================================================== */
+.pink article { border-left: 8px solid #e91e63 !important; }
+.pink .category-icon_corvus { background-color: #e91e63 !important; }
+.pink article:after { background-color: #e91e63 !important; }
+.pink .category-label_corvus { border-right: 4px solid #e91e63 !important; }
+.pink > a:hover .category-label_corvus { background-color: #e91e63 !important; }
+.pink article header ul li > i { color: #e91e63 !important; }
+.pink header h2 a:hover { color: #e91e63 !important; }
+.pink article .read-more_corvus, .pink article .read-more_corvus i { color: #e91e63 !important; }
+
+ /* ==========================================================================
+   					3. PURPLE - #9c27b0 ( article class="purple" ) 
+   ========================================================================== */
+.purple article { border-left: 8px solid #9c27b0 !important; }
+.purple .category-icon_corvus { background-color: #9c27b0 !important; }
+.purple article:after { background-color: #9c27b0 !important; }
+.purple .category-label_corvus { border-right: 4px solid #9c27b0 !important; }
+.purple > a:hover .category-label_corvus { background-color: #9c27b0 !important; }
+.purple article header ul li > i { color: #9c27b0 !important; }
+.purple header h2 a:hover { color: #9c27b0 !important; }
+.purple article .read-more_corvus, .purple article .read-more_corvus i { color: #9c27b0 !important; }
+
+ /* ==========================================================================
+   					4. DEEP-PURPLE - #673ab7 ( article class="deep-purple" ) 
+   ========================================================================== */
+.deep-purple article { border-left: 8px solid #673ab7 !important; }
+.deep-purple .category-icon_corvus { background-color: #673ab7 !important; }
+.deep-purple article:after { background-color: #673ab7 !important; }
+.deep-purple .category-label_corvus { border-right: 4px solid #673ab7 !important; }
+.deep-purple > a:hover .category-label_corvus { background-color: #673ab7 !important; }
+.deep-purple article header ul li > i { color: #673ab7 !important; }
+.deep-purple header h2 a:hover { color: #673ab7 !important; }
+.deep-purple article .read-more_corvus, .deep-purple article .read-more_corvus i { color: #673ab7 !important; }
+
+ /* ==========================================================================
+   					5. INDIGO - #3f51b5 ( article class="indigo" ) 
+   ========================================================================== */
+.indigo article { border-left: 8px solid #3f51b5 !important; }
+.indigo .category-icon_corvus { background-color: #3f51b5 !important; }
+.indigo article:after { background-color: #3f51b5 !important; }
+.indigo .category-label_corvus { border-right: 4px solid #3f51b5 !important; }
+.indigo > a:hover .category-label_corvus { background-color: #3f51b5 !important; }
+.indigo article header ul li > i { color: #3f51b5 !important; }
+.indigo header h2 a:hover { color: #3f51b5 !important; }
+.indigo article .read-more_corvus, .indigo article .read-more_corvus i { color: #3f51b5 !important; }
+
+ /* ==========================================================================
+   					6. BLUE - #15629E ( article class="blue" ) 
+   ========================================================================== */
+.blue article { border-left: 8px solid #15629E !important; }
+.blue .category-icon_corvus { background-color: #15629E !important; }
+.blue article:after { background-color: #15629E !important; }
+.blue .category-label_corvus { border-right: 4px solid #15629E !important; }
+.blue > a:hover .category-label_corvus { background-color: #15629E !important; }
+.blue article header ul li > i { color: #15629E !important; }
+.blue header h2 a:hover { color: #15629E !important; }
+.blue article .read-more_corvus, .blue article .read-more_corvus i { color: #15629E !important; }
+
+ /* ==========================================================================
+   					7. LIGHT-BLUE - #03a9f4 ( article class="light-blue" ) 
+   ========================================================================== */
+.light-blue article { border-left: 8px solid #03a9f4 !important; }
+.light-blue .category-icon_corvus { background-color: #03a9f4 !important; }
+.light-blue article:after { background-color: #03a9f4 !important; }
+.light-blue .category-label_corvus { border-right: 4px solid #03a9f4 !important; }
+.light-blue > a:hover .category-label_corvus { background-color: #03a9f4 !important; }
+.light-blue article header ul li > i { color: #03a9f4 !important; }
+.light-blue header h2 a:hover { color: #03a9f4 !important; }
+.light-blue article .read-more_corvus, .light-blue article .read-more_corvus i { color: #03a9f4 !important; }
+
+ /* ==========================================================================
+   					8. CYAN - #00bcd4 ( article class="cyan" ) 
+   ========================================================================== */
+.cyan article { border-left: 8px solid #00bcd4 !important; }
+.cyan .category-icon_corvus { background-color: #00bcd4 !important; }
+.cyan article:after { background-color: #00bcd4 !important; }
+.cyan .category-label_corvus { border-right: 4px solid #00bcd4 !important; }
+.cyan > a:hover .category-label_corvus { background-color: #00bcd4 !important; }
+.cyan article header ul li > i { color: #00bcd4 !important; }
+.cyan header h2 a:hover { color: #00bcd4 !important; }
+.cyan article .read-more_corvus, .cyan article .read-more_corvus i { color: #00bcd4 !important; }
+
+ /* ==========================================================================
+   					9. TEAL - #009688 ( article class="teal" ) 
+   ========================================================================== */
+.teal article { border-left: 8px solid #009688 !important; }
+.teal .category-icon_corvus { background-color: #009688 !important; }
+.teal article:after { background-color: #009688 !important; }
+.teal .category-label_corvus { border-right: 4px solid #009688 !important; }
+.teal > a:hover .category-label_corvus { background-color: #009688 !important; }
+.teal article header ul li > i { color: #009688 !important; }
+.teal header h2 a:hover { color: #009688 !important; }
+.teal article .read-more_corvus, .teal article .read-more_corvus i { color: #009688 !important; }
+
+ /* ==========================================================================
+   					10. GREEN - #1D6A20 ( article class="green" )
+   ========================================================================== */
+.green article { border-left: 8px solid #1D6A20 !important; }
+.green .category-icon_corvus { background-color: #1D6A20 !important; }
+.green .category-label_corvus { border-right: 4px solid #1D6A20 !important; }
+.green > a:hover .category-label_corvus { background-color: #1D6A20 !important; }
+.green article:after { background-color: #1D6A20 !important; }
+.green article header ul li > i { color: #1D6A20 !important; }
+.green header h2 a:hover { color: #1D6A20 !important; }
+.green article .read-more_corvus, .green article .read-more_corvus i { color: #1D6A20 !important; }
+
+ /* ==========================================================================
+   					11. LIGHT GREEN - #8bc34a ( article class="light-green" )
+   ========================================================================== */
+.light-green article { border-left: 8px solid #8bc34a !important; }
+.light-green .category-icon_corvus { background-color: #8bc34a !important; }
+.light-green .category-label_corvus { border-right: 4px solid #8bc34a !important; }
+.light-green > a:hover .category-label_corvus { background-color: #8bc34a !important; }
+.light-green article:after { background-color: #8bc34a !important; }
+.light-green article header ul li > i { color: #8bc34a !important; }
+.light-green header h2 a:hover { color: #8bc34a !important; }
+.light-green article .read-more_corvus, .light-green article .read-more_corvus i { color: #8bc34a !important; }
+
+ /* ==========================================================================
+   					12. LIME - #cddc39 ( article class="lime" )
+   ========================================================================== */
+.lime article { border-left: 8px solid #cddc39 !important; }
+.lime .category-icon_corvus { background-color: #cddc39 !important; }
+.lime .category-label_corvus { border-right: 4px solid #cddc39 !important; }
+.lime > a:hover .category-label_corvus { background-color: #cddc39 !important; }
+.lime article:after { background-color: #cddc39 !important; }
+.lime article header ul li > i { color: #cddc39 !important; }
+.lime header h2 a:hover { color: #cddc39 !important; }
+.lime article .read-more_corvus, .lime article .read-more_corvus i { color: #cddc39 !important; }
+
+ /* ==========================================================================
+   					13. YELLOW - #ffeb3b ( article class="yellow" )
+   ========================================================================== */
+.yellow article { border-left: 8px solid #ffeb3b !important; }
+.yellow .category-icon_corvus { background-color: #ffeb3b !important; }
+.yellow .category-label_corvus { border-right: 4px solid #ffeb3b !important; }
+.yellow > a:hover .category-label_corvus { background-color: #ffeb3b !important; }
+.yellow article:after { background-color: #ffeb3b !important; }
+.yellow article header ul li > i { color: #ffeb3b !important; }
+.yellow header h2 a:hover { color: #ffeb3b !important; }
+.yellow article .read-more_corvus, .yellow article .read-more_corvus i { color: #ffeb3b !important; }
+
+ /* ==========================================================================
+   					14. AMBER - #ffc107 ( article class="amber" )
+   ========================================================================== */
+.amber article { border-left: 8px solid #ffc107 !important; }
+.amber .category-icon_corvus { background-color: #ffc107 !important; }
+.amber .category-label_corvus { border-right: 4px solid #ffc107 !important; }
+.amber > a:hover .category-label_corvus { background-color: #ffc107 !important; }
+.amber article:after { background-color: #ffc107 !important; }
+.amber article header ul li > i { color: #ffc107 !important; }
+.amber header h2 a:hover { color: #ffc107 !important; }
+.amber article .read-more_corvus, .amber article .read-more_corvus i { color: #ffc107 !important; }
+
+ /* ==========================================================================
+   					15. ORANGE - #ff9800 ( article class="orange" )
+   ========================================================================== */
+.orange article { border-left: 8px solid #ff9800 !important; }
+.orange .category-icon_corvus { background-color: #ff9800 !important; }
+.orange .category-label_corvus { border-right: 4px solid #ff9800 !important; }
+.orange > a:hover .category-label_corvus { background-color: #ff9800 !important; }
+.orange article:after { background-color: #ff9800 !important; }
+.orange article header ul li > i { color: #ff9800 !important; }
+.orange header h2 a:hover { color: #ff9800 !important; }
+.orange article .read-more_corvus, .orange article .read-more_corvus i { color: #ff9800 !important; }
+
+ /* ==========================================================================
+   					16. DEEP-ORANGE - #ff5722 ( article class="deep-orange" )
+   ========================================================================== */
+.deep-orange article { border-left: 8px solid #ff5722 !important; }
+.deep-orange .category-icon_corvus { background-color: #ff5722 !important; }
+.deep-orange .category-label_corvus { border-right: 4px solid #ff5722 !important; }
+.deep-orange > a:hover .category-label_corvus { background-color: #ff5722 !important; }
+.deep-orange article:after { background-color: #ff5722 !important; }
+.deep-orange article header ul li > i { color: #ff5722 !important; }
+.deep-orange header h2 a:hover { color: #ff5722 !important; }
+.deep-orange article .read-more_corvus, .deep-orange article .read-more_corvus i { color: #ff5722 !important; }
+
+ /* ==========================================================================
+   					17. BROWN - #795548 ( article class="brown" )
+   ========================================================================== */
+.brown article { border-left: 8px solid #795548 !important; }
+.brown .category-icon_corvus { background-color: #795548 !important; }
+.brown .category-label_corvus { border-right: 4px solid #795548 !important; }
+.brown > a:hover .category-label_corvus { background-color: #795548 !important; }
+.brown article:after { background-color: #795548 !important; }
+.brown article header ul li > i { color: #795548 !important; }
+.brown header h2 a:hover { color: #795548 !important; }
+.brown article .read-more_corvus, .brown article .read-more_corvus i { color: #795548 !important; }
+
+ /* ==========================================================================
+   					18. GREY - #9e9e9e ( article class="grey" )
+   ========================================================================== */
+.grey article { border-left: 8px solid #9e9e9e !important; }
+.grey .category-icon_corvus { background-color: #9e9e9e !important; }
+.grey .category-label_corvus { border-right: 4px solid #9e9e9e !important; }
+.grey > a:hover .category-label_corvus { background-color: #9e9e9e !important; }
+.grey article:after { background-color: #9e9e9e !important; }
+.grey article header ul li > i { color: #9e9e9e !important; }
+.grey header h2 a:hover { color: #9e9e9e !important; }
+.grey article .read-more_corvus, .grey article .read-more_corvus i { color: #9e9e9e !important; }
+
+ /* ==========================================================================
+   					19. BLUE-GREY - #607d8b ( article class="blue-grey" )
+   ========================================================================== */
+.blue-grey article { border-left: 8px solid #607d8b !important; }
+.blue-grey .category-icon_corvus { background-color: #607d8b !important; }
+.blue-grey .category-label_corvus { border-right: 4px solid #607d8b !important; }
+.blue-grey > a:hover .category-label_corvus { background-color: #607d8b !important; }
+.blue-grey article:after { background-color: #607d8b !important; }
+.blue-grey article header ul li > i { color: #607d8b !important; }
+.blue-grey header h2 a:hover { color: #607d8b !important; }
+.blue-grey article .read-more_corvus, .blue-grey article .read-more_corvus i { color: #607d8b !important; }
+
+ /* ==========================================================================
+   					20. DARK - #212121 ( article class="dark" )
+   ========================================================================== */
+.dark article { border-left: 8px solid #333 !important; } 
+.dark .category-icon_corvus { background-color: #333 !important; }
+.dark .category-label_corvus { border-right: 4px solid #333 !important; }
+.dark > a:hover .category-label_corvus { background-color: #333 !important; }
+.dark article:after { background-color: #333 !important; }
+.dark article header ul li > i { color: #333 !important; }
+.dark header h2 a:hover { color: #333 !important; }
+.dark article .read-more_corvus, .dark article .read-more_corvus i { color: #333 !important; }
+
+
+
+/* ====================================================================================================================================================
+                                                    Main Theme Colors - HEADER/FOOTER/MENU HOVER
+=================================================================================================================================================== */
+
+/*RED*/
+#red .main-header_corvus, #red .main-footer_corvus { background-color: #AF4034; }
+#red .main-footer_corvus .wrapper_corvus > a:hover i { color: #AF4034; }
+#red #menu_corvus .wrapper_corvus > ul li a:hover { border-bottom: 2px solid #AF4034; }
+#red .postcontent_corvus a { color: #AF4034; }
+
+/*PINK*/
+#pink .main-header_corvus, #pink .main-footer_corvus { background-color: #e91e63; }
+#pink .main-footer_corvus .wrapper_corvus > a:hover i { color: #e91e63; }
+#pink #menu_corvus .wrapper_corvus > ul li a:hover { border-bottom: 2px solid #e91e63; }
+#pink .postcontent_corvus a { color: #e91e63; }
+
+/*PURPLE*/
+#purple .main-header_corvus, #purple .main-footer_corvus { background-color: #9c27b0; }
+#purple .main-footer_corvus .wrapper_corvus > a:hover i { color: #9c27b0; }
+#purple #menu_corvus .wrapper_corvus > ul li a:hover { border-bottom: 2px solid #9c27b0; }
+#purple .postcontent_corvus a { color: #9c27b0; }
+
+/*DEEP-PURPLE*/
+#deep-purple .main-header_corvus, #deep-purple .main-footer_corvus { background-color: #673ab7; }
+#deep-purple .main-footer_corvus .wrapper_corvus > a:hover i { color: #673ab7; }
+#deep-purple #menu_corvus .wrapper_corvus > ul li a:hover { border-bottom: 2px solid #673ab7; }
+#deep-purple .postcontent_corvus a { color: #673ab7; }
+
+/*INDIGO*/
+#indigo .main-header_corvus, #indigo .main-footer_corvus { background-color: #3f51b5; }
+#indigo .main-footer_corvus .wrapper_corvus > a:hover i { color: #3f51b5; }
+#indigo #menu_corvus .wrapper_corvus > ul li a:hover { border-bottom: 2px solid #3f51b5; }
+#indigo .postcontent_corvus a { color: #3f51b5; }
+
+
+/*BLUE*/
+#blue .main-header_corvus, #blue .main-footer_corvus { background-color: #15629E; }
+#blue .main-footer_corvus .wrapper_corvus > a:hover i { color: #15629E; }
+#blue #menu_corvus .wrapper_corvus > ul li a:hover { border-bottom: 2px solid #15629E; }
+#blue .postcontent_corvus a { color: #15629E; }
+
+/*LIGHT-BLUE*/
+#light-blue .main-header_corvus, #light-blue .main-footer_corvus { background-color: #03a9f4; }
+#light-blue .main-footer_corvus .wrapper_corvus > a:hover i { color: #03a9f4; }
+#light-blue #menu_corvus .wrapper_corvus > ul li a:hover { border-bottom: 2px solid #03a9f4; }
+#ligh-blue .postcontent_corvus a { color: #03a9f4; }
+
+/*CYAN*/
+#cyan .main-header_corvus, #cyan .main-footer_corvus { background-color: #00bcd4; }
+#cyan .main-footer_corvus .wrapper_corvus > a:hover i { color: #00bcd4; }
+#cyan #menu_corvus .wrapper_corvus > ul li a:hover { border-bottom: 2px solid #00bcd4; }
+#cyan .postcontent_corvus a { color: #00bcd4; }
+
+/*TEAL*/
+#teal .main-header_corvus, #teal .main-footer_corvus { background-color: #009688; }
+#teal .main-footer_corvus .wrapper_corvus > a:hover i { color: #009688; }
+#teal #menu_corvus .wrapper_corvus > ul li a:hover { border-bottom: 2px solid #009688; }
+#teal .postcontent_corvus a { color: #009688; }
+
+/*GREEN*/
+#green .main-header_corvus, #green .main-footer_corvus { background-color: #1D6A20; }
+#green .main-footer_corvus .wrapper_corvus > a:hover i { color: #1D6A20; }
+#green #menu_corvus .wrapper_corvus > ul li a:hover { border-bottom: 2px solid #1D6A20; }
+#green .postcontent_corvus a { color: #1D6A20; }
+
+/*LIGHT-GREEN*/
+#light-green .main-header_corvus, #light-green .main-footer_corvus { background-color: #8bc34a; }
+#light-green .main-footer_corvus .wrapper_corvus > a:hover i { color: #8bc34a; }
+#light-green #menu_corvus .wrapper_corvus > ul li a:hover { border-bottom: 2px solid #8bc34a; }
+#light-green .postcontent_corvus a { color: #8bc34a; }
+
+/*LIME*/
+#lime .main-header_corvus, #lime .main-footer_corvus { background-color: #cddc39; }
+#lime .main-footer_corvus .wrapper_corvus > a:hover i { color: #cddc39; }
+#lime #menu_corvus .wrapper_corvus > ul li a:hover { border-bottom: 2px solid #cddc39; }
+#lime .postcontent_corvus a { color: #cddc39; }
+
+/*YELLOW*/
+#yellow .main-header_corvus, #yellow .main-footer_corvus { background-color: #ffeb3b; }
+#yellow .main-footer_corvus .wrapper_corvus > a:hover i { color: #ffeb3b; }
+#yellow #menu_corvus .wrapper_corvus > ul li a:hover { border-bottom: 2px solid #ffeb3b; }
+#yellow .postcontent_corvus a { color: #ffeb3b; }
+
+/*AMBER*/
+#amber .main-header_corvus, #amber .main-footer_corvus { background-color: #ffc107; }
+#amber .main-footer_corvus .wrapper_corvus > a:hover i { color: #ffc107; }
+#amber #menu_corvus .wrapper_corvus > ul li a:hover { border-bottom: 2px solid #ffc107; }
+#amber .postcontent_corvus a { color: #ffc107; }
+
+/*ORANGE*/
+#orange .main-header_corvus, #orange .main-footer_corvus { background-color: #ff9800; }
+#orange .main-footer_corvus .wrapper_corvus > a:hover i { color: #ff9800; }
+#orange #menu_corvus .wrapper_corvus > ul li a:hover { border-bottom: 2px solid #ff9800; }
+#orange .postcontent_corvus a { color: #ff9800; }
+
+/*DEEP-ORANGE*/
+#deep-orange .main-header_corvus, #deep-orange .main-footer_corvus { background-color: #ff5722; }
+#deep-orange .main-footer_corvus .wrapper_corvus > a:hover i { color: #ff5722; }
+#deep-orange #menu_corvus .wrapper_corvus > ul li a:hover { border-bottom: 2px solid #ff5722; }
+#deep-orange .postcontent_corvus a { color: #ff5722; }
+
+/*BROWN*/
+#brown .main-header_corvus, #brown .main-footer_corvus { background-color: #795548; }
+#brown .main-footer_corvus .wrapper_corvus > a:hover i { color: #795548; }
+#brown #menu_corvus .wrapper_corvus > ul li a:hover { border-bottom: 2px solid #795548; }
+#brown .postcontent_corvus a { color: #795548; }
+
+/*GREY*/
+#grey .main-header_corvus, #grey .main-footer_corvus { background-color: #9e9e9e; }
+#grey .main-footer_corvus .wrapper_corvus > a:hover i { color: #9e9e9e; }
+#grey #menu_corvus .wrapper_corvus > ul li a:hover { border-bottom: 2px solid #9e9e9e; }
+#grey .postcontent_corvus a { color: #9e9e9e; }
+
+/*BLUE-GREY*/
+#blue-grey .main-header_corvus, #blue-grey .main-footer_corvus { background-color: #607d8b; }
+#blue-grey .main-footer_corvus .wrapper_corvus > a:hover i { color: #607d8b; }
+#blue-grey #menu_corvus .wrapper_corvus > ul li a:hover { border-bottom: 2px solid #607d8b; }
+#blue-grey .postcontent_corvus a { color: #607d8b; }
+
+/*DARK*/
+#dark .main-header_corvus, #dark .main-footer_corvus { background-color: #333; }
+#dark .main-footer_corvus .wrapper_corvus > a:hover i { color: #333; }
+#dark #menu_corvus .wrapper_corvus > ul li a:hover { border-bottom: 2px solid #333; }
+#dark .postcontent_corvus a { color: #333; }
+
+
+/*====================================================================================================================================================
+                                                        Media Queries - Phone
+==================================================================================================================================================*/
+ 
+@media all and (max-width: 600px) {
+    
+    /*RED*/
+    .red  article {
+        border-left: none !important;
+        border-top: 8px solid #AF4034;
+    }
+    .red .category-label_corvus { border-right: none !important; }
+
+    /*PINK*/
+    .pink  article {
+        border-left: none !important;
+        border-top: 8px solid #e91e63;
+    }
+    .pink .category-label_corvus { border-right: none !important; }
+    
+    /*PURPLE*/
+    .purple  article {
+        border-left: none !important;
+        border-top: 8px solid #9c27b0;
+    }
+    .purple .category-label_corvus { border-right: none !important; }
+    
+    /*DEEP-PURPLE*/
+    .deep-purple  article {
+        border-left: none !important;
+        border-top: 8px solid #673ab7;
+    }
+    .deep-purple .category-label_corvus { border-right: none !important; }
+    
+    /*INDIGO*/
+    .indigo article {
+        border-left: none !important;
+        border-top: 8px solid #3f51b5;
+    }
+    .indigo .category-label_corvus { border-right: none !important; }
+    
+    /*BLUE*/
+    .blue article {
+        border-left: none !important;
+        border-top: 8px solid #15629E;
+    }
+    .blue .category-label_corvus { border-right: none !important; }
+    
+    /*LIGHT-BLUE*/
+    .light-blue article {
+        border-left: none !important;
+        border-top: 8px solid #03a9f4;
+    }
+    .light-blue .category-label_corvus { border-right: none !important; }
+    
+    /*CYAN*/
+    .cyan article {
+        border-left: none !important;
+        border-top: 8px solid #00bcd4;
+    }
+    .cyan .category-label_corvus { border-right: none !important; }
+    
+    /*TEAL*/
+    .teal article {
+        border-left: none !important;
+        border-top: 8px solid #009688;
+    }
+    .teal .category-label_corvus { border-right: none !important; }
+    
+    /*GREEN*/
+    .green  article {
+        border-left: none !important;
+        border-top: 8px solid #1D6A20;
+    }
+    .green .category-label_corvus { border-right: none !important; }
+    
+    /*LIGHT-GREEN*/
+    .light-green  article {
+        border-left: none !important;
+        border-top: 8px solid #8bc34a;
+    }
+    .light-green .category-label_corvus { border-right: none !important; }
+    
+    /*LIME*/
+    .lime article {
+        border-left: none !important;
+        border-top: 8px solid #cddc39;
+    }
+    .lime .category-label_corvus { border-right: none !important; }
+    
+    /*YELLOW*/
+    .yellow article {
+        border-left: none !important;
+        border-top: 8px solid #ffeb3b;
+    }
+    .yellow .category-label_corvus { border-right: none !important; }
+    
+    /*AMBER*/
+    .amber article {
+        border-left: none !important;
+        border-top: 8px solid #ffc107;
+    }
+    .amber .category-label_corvus { border-right: none !important; }
+    
+    /*ORANGE*/
+    .orange article {
+        border-left: none !important;
+        border-top: 8px solid #ff9800;
+    }
+    .orange .category-label_corvus { border-right: none !important; }
+    
+    /*DEEP-ORANGE*/
+    .deep-orange article {
+        border-left: none !important;
+        border-top: 8px solid #ff5722;
+    }
+    .deep-orange .category-label_corvus { border-right: none !important; }
+    
+    /*BROWN*/
+    .brown article {
+        border-left: none !important;
+        border-top: 8px solid #795548;
+    }
+    .brown .category-label_corvus { border-right: none !important; }
+    
+    /*GREY*/
+    .grey article {
+        border-left: none !important;
+        border-top: 8px solid #9e9e9e;
+    }
+    .grey .category-label_corvus { border-right: none !important; }
+    
+    /*BLUE-GREY*/
+    .blue-grey article {
+        border-left: none !important;
+        border-top: 8px solid #607d8b;
+    }
+    .blue-grey .category-label_corvus { border-right: none !important; }
+    
+    /*DARK*/
+    .dark article {
+        border-left: none !important;
+        border-top: 8px solid #333;
+    }
+    .dark .category-label_corvus { border-right: none !important; }
+}
